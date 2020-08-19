@@ -9,8 +9,8 @@
 </nav>
 <div class="container pt-5">
     @yield('content')
-    <footer class="row">
-        @include('include.footer')
-    </footer>
 </div>
+<footer class="row">
+    @include('include.footer')
+</footer>
 </body>
