@@ -1,6 +1,7 @@
+
 # gCalendar test
 
-### Testing google calendar api
+## Google calendar api testing
 
-Language used for backend - PHP
-Framework - Laravel
+Backend language - PHP  
+PHP Framework - Laravel  
