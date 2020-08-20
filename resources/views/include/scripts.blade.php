@@ -21,7 +21,7 @@
                 $("#phone_error").show();
                 return false;
             }
-            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($("#email").val()))) {
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test($("#email").val()))) {
                 $("#email_error").show();
                 return false;
             }
@@ -31,13 +31,14 @@
             }
 
             let input_date = new Date($("#date").val());
-            let current_date = new Date();
+            let current_date = new Date().getDay() + 1;
 
             if (!$("#date").val()) {
                 $("#date_error").show();
                 return false;
             } else if (input_date < current_date) {
                 $("#date_error").show();
+                return false;
             }
 
             return true;

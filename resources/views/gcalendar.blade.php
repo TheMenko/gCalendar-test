@@ -54,7 +54,7 @@
         <div class="col-sm-3 valid-tooltip"></div>
     </div>
 
-    <div id="success" class="alert alert-success" style="display: none">Success.</div>
+    <div id="success" class="alert alert-success mt-5" style="display: none">Success.</div>
     <div id="error" class="alert alert-danger" style="display: none">Something went wrong.</div>
 @stop
 @include('include.scripts')
