@@ -41,6 +41,11 @@
                 return false;
             }
 
+            if (!$("#captcha").val()) {
+                $("#captcha_error").show();
+                return false;
+            }
+
             return true;
         }
 
@@ -58,6 +63,7 @@
                     let email = $("#email").val();
                     let time = $("#time").val();
                     let date = $("#date").val();
+                    let captcha = $("#captcha").val();
                     let _token = $('meta[name="csrf-token"]').attr('content');
 
                     $.ajax({
@@ -69,6 +75,7 @@
                             phone: phone,
                             time: time,
                             date: date,
+                            captcha: captcha,
                             _token: _token
                         },
                         success: function (response) {

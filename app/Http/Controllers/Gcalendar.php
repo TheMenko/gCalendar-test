@@ -12,7 +12,6 @@ use Google_Service_Calendar_EventReminder;
 use Google_Service_Calendar_EventReminders;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class Gcalendar extends Controller
@@ -57,7 +56,8 @@ class Gcalendar extends Controller
             'phone' => ['required'],
             'email' => ['required'],
             'time' => ['required'],
-            'date' => ['required']
+            'date' => ['required'],
+            'captcha' => ['captcha']
         ]);
 
         if ($validator->fails()) {
@@ -70,6 +70,8 @@ class Gcalendar extends Controller
         $email = $request->input("email");
         $date = $request->input("date");
         $time = $request->input("time");
+        $captcha = $request->input("captcha");
+
 
         $google_client = $this->getClient();
         if ($google_client == null) {

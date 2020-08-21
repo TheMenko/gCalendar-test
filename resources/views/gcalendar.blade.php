@@ -51,7 +51,13 @@
         <div class="col-sm-2">
             <button id="btn_add" class="btn btn-primary">Add to Calendar</button>
         </div>
-        <div class="col-sm-3 valid-tooltip"></div>
+        <div class="col-sm-5">
+            @captcha
+            <input type="text" id="captcha" name="captcha" autocomplete="off">
+        </div>
+        <div class="col-sm-3">
+            <div id="captcha_error" class="alert alert-danger" style="display: none">Please fill out captcha.</div>
+        </div>
     </div>
 
     <div id="success" class="alert alert-success mt-5" style="display: none">Success.</div>
